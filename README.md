@@ -2,9 +2,11 @@
 
 A simple and clean implementation of the classic snake game using HTML, CSS, and JavaScript.
 
-[ScreenShots](/assets/EkranGörüntüsü1.jpg)
+## Screenshots
 
-[](/assets/EkranGörüntüsü2.jpg)
+![Game Screenshot 1](/assets/EkranGörüntüsü1.jpg)
+
+![Game Screenshot 2](/assets/EkranGörüntüsü2.jpg)
 
 ## Demo
 
