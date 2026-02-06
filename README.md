@@ -8,9 +8,9 @@ A simple and clean implementation of the classic snake game using HTML, CSS, and
 
 ![Game Screenshot 2](/assets/EkranGörüntüsü2.jpg)
 
-## Demo
+## Live
 
-![Snake Game Demo](/assets/demo.gif)
+[Snake Game Live](https://simplysnakegame.netlify.app/)
 
 
 ## Features
