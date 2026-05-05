@@ -1,96 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Nokia Snake II Palette */
+:root {
+  --snake-bg:    #8BAC0F;  /* LCD zemin */
+  --snake-dark:  #0F380F;  /* yılan, UI */
+  --snake-mid:   #306230;  /* wrapper bg */
+  --snake-light: #9BBC0F;  /* vurgu */
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #03fda1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--snake-bg);        /* #8BAC0F — orijinal ile aynı */
 }
 
-.wrapper{
-    width: 65vmin;
-    height: 70vmin;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
-    background: #21763c;
-    border-radius: 5px;
-    box-shadow: 0 20px 40px  rgba(52, 87, 220, 0.2);
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--snake-dark);      /* #0F380F — koyu yeşil çerçeve */
+  border-radius: 5px;
+  box-shadow: 0 20px 40px rgba(15, 56, 15, 0.4);  /* mavi yerine yeşil gölge */
 }
 
-.game-details{
-    color: #b8c6dc;
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 20px 27px;
-    display: flex;
-    justify-content: space-between;
-
+.game-details {
+  color: var(--snake-bg);             /* #8BAC0F — LCD zemin rengi yazı */
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.play-board{
-    height: 100%;
-    width: 100;
-    display: grid;
-    background: #14c947;
-    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
-
+.play-board {
+  height: 100%;
+  width: 100%;                        /* 100 → 100% (bug fix) */
+  display: grid;
+  background: var(--snake-bg);        /* #8BAC0F — oyun alanı zemini */
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
 
-.play-board .food{
-    background: red;
+.play-board .food {
+  background: var(--snake-dark);      /* #0F380F — yem, klasik nokia tarzı */
+  border-radius: 50%;
 }
 
-.play-board .head{
-    background: whitesmoke;
+.play-board .head {
+  background: var(--snake-light);     /* #9BBC0F — baş biraz daha açık */
 }
 
-
-.controls{
-    display: none;
-    justify-content: space-between;
-
+.controls {
+  display: none;
+  justify-content: space-between;
 }
 
-.controls i{
-    padding:  25px 0;
-    text-align: center;
-    font-size: 1.3rem;
-    color: whitesmoke;
-    width: calc(100% / 4);
-    cursor: pointer;
-    border-right: 1px solid #171b26;
-
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--snake-bg);             /* #8BAC0F */
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid var(--snake-mid);  /* #306230 */
 }
 
 @media screen and (max-width: 800px) {
-    .wrapper{
-        width: 90vmin;
-        height: 115vmin;
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
 
-    }
-}
-
-.game-details{
+  .game-details {
     font-size: 1rem;
     padding: 15px 27px;
-}
+  }
 
-.controls{
+  .controls {
     display: flex;
-}
+  }
 
-.controls i{
+  .controls i {
     padding: 15px 0;
     font-size: 1.5rem;
+  }
 }
